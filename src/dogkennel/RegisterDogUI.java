@@ -6,7 +6,6 @@
 package dogkennel;
 
 import java.util.HashMap;
-import jdk.internal.org.objectweb.asm.commons.StaticInitMerger;
 
 /**
  *
@@ -14,12 +13,12 @@ import jdk.internal.org.objectweb.asm.commons.StaticInitMerger;
  */
 public class RegisterDogUI {
 	private UI ui;
-	private HashMap<String,String> dogParams;
+	private Dog dog;
 	
 	
-	public RegisterDogUI(UI ui, HashMap<String,String> dogParams) {
+	public RegisterDogUI(UI ui, Dog dog) {
 		this.ui = ui;
-		this.dogParams = dogParams;
+		this.dog = dog;
 		
 	}
 	//public HashMap<String,String> getDogParams() {
@@ -29,11 +28,11 @@ public class RegisterDogUI {
 		while (choice != 9)  {
 			choice = ui.getInputInt("Enter choice");
 			switch(choice) {
-				case 1: dogParams.put("Name", ui.getInput("Name")); break;
-				case 2: dogParams.put("Breed", ui.getInput("Breed")); break;
-				case 3: dogParams.put("Color", ui.getInput("Color")); break;
-				case 4: dogParams.put("Age", ui.getInput("Age")); break;
-				case 5: dogParams.put("CityOfOrigin", ui.getInput("CityOfOrigin")); break;
+				case 1: dog.setDogname(ui.getInput("Name")); break;
+				case 2: dog.setBreed(ui.getInput("Breed")); break;
+				case 3: dog.setColor(ui.getInput("Color")); break;
+				case 4: dog.setAge(ui.getInputInt("Age")); break;
+				case 5: dog.setCityOrigin(ui.getInput("CityOfOrigin")); break;
 				case 6: printRegDogMenu();break;
 				default:System.out.println("Exit");choice = 9;break;
 			}

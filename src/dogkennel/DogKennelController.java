@@ -5,7 +5,6 @@
  */
 package dogkennel;
 
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -17,14 +16,11 @@ public class DogKennelController {
 	int choice =0;
 
 	public void runProgram() {
-		HashMap<String,String> dogParams = new HashMap<>();
 		UI ui = new UI();
-		RegisterDogUI regDog =  new RegisterDogUI(ui, dogParams);
+		Dog dog = new Dog();
+		RegisterDogUI regDog =  new RegisterDogUI(ui, dog);
 		regDog.getDogParams();
-		Set<String> keys = dogParams.keySet();
-		for (String  key: keys) {
-			System.out.println(key + " -> " + dogParams.get(key));
-		}
+		System.out.println(dog);
 
 	}
 	
