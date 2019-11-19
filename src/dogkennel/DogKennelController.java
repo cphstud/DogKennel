@@ -25,6 +25,13 @@ public class DogKennelController {
 		for (String  key: keys) {
 			System.out.println(key + " -> " + dogParams.get(key));
 		}
+		Dog dog = new Dog();
+		dog.setDogname(dogParams.get("Name"));
+		dog.setBreed(dogParams.get("Breed"));
+		dog.setColor(dogParams.get("Color"));
+		dog.setCityOrigin(dogParams.get("CityOfOrigin"));
+		dog.setAge(Integer.parseInt(dogParams.get("Age")));
+		System.out.println("Dog " + dog);
 
 	}
 	
