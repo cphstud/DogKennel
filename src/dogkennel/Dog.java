@@ -14,6 +14,15 @@ public class Dog {
 
 	}
 
+	public Dog(int id, String color, String breed, String dogname, String gender, String cityOrigin) {
+		this.id = id;
+		this.dogname = dogname;
+		this.gender = gender;
+		this.color = color;
+		this.breed = breed;
+		this.cityOrigin = cityOrigin;
+	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
@@ -41,23 +50,15 @@ public class Dog {
 		this.cityOrigin = cityOrigin;
 	}
 
-	public Dog(int id, String color, String breed, String dogname, String gender, String cityOrigin) {
-		this.id = id;
-		this.dogname = dogname;
-		this.gender = gender;
-		this.color = color;
-		this.breed = breed;
-		this.cityOrigin = cityOrigin;
-	}
 
 	@Override
 	public String toString() {
 		String msg = "";
 		msg += "NAME: " + this.dogname;
-		msg += "\nRACE: " + this.breed;
-		msg += "\nGENDER: " + this.gender;
-		msg += "\nCOLOR: " + this.color;
-		msg += "\nTOWN: " + this.cityOrigin;
+		msg += " RACE: " + this.breed;
+		msg += " COLOR: " + this.color;
+		msg += " TOWN: " + this.cityOrigin;
+		msg += " AGE: " + this.age;
 		System.out.println(msg);
 
 		return msg;
