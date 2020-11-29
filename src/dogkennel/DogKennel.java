@@ -17,7 +17,7 @@ public class DogKennel {
 	 * @param args the command line arguments
 	 */
 	public static void main(String[] args) {
-		DogKennelController dc = new DogKennelController();
+		dogkennel.DogKennelController dc = new dogkennel.DogKennelController();
 		dc.runProgram();
 	}
 	

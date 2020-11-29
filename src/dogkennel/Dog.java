@@ -11,7 +11,6 @@ public class Dog {
 	String cityOrigin;
 
 	public Dog() {
-
 	}
 
 	public Dog(int id, String color, String breed, String dogname, String gender, String cityOrigin) {

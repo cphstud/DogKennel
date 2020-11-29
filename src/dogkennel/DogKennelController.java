@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dogkennel;
 
 import java.util.Iterator;
@@ -18,6 +13,7 @@ public class DogKennelController {
 	public void runProgram() {
 		UI ui = new UI();
 		Dog dog = new Dog();
+		//RegisterDogUI regDog =  new RegisterDogUI(ui, dog);
 		RegisterDogUI regDog =  new RegisterDogUI(ui, dog);
 		regDog.getDogParams();
 		System.out.println(dog);

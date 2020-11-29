@@ -22,6 +22,9 @@ public class UI {
 		sc.nextLine();
 		return retVal;
 	}
-	
+
+	public void printDog(Dog dog) {
+		System.out.println(dog);
+	}
 }
 	

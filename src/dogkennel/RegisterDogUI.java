@@ -33,7 +33,8 @@ public class RegisterDogUI {
 				case 3: dog.setColor(ui.getInput("Color")); break;
 				case 4: dog.setAge(ui.getInputInt("Age")); break;
 				case 5: dog.setCityOrigin(ui.getInput("CityOfOrigin")); break;
-				case 6: printRegDogMenu();break;
+				case 6: ui.printDog(dog);
+				case 7: printRegDogMenu();break;
 				default:System.out.println("Exit");choice = 9;break;
 			}
 		}
@@ -45,8 +46,9 @@ public class RegisterDogUI {
 		System.out.println("3) get Color");
 		System.out.println("4) get Age");
 		System.out.println("5) get CityOfOrigin");
-		System.out.println("6) reprint this  menu ");
-		System.out.println("9) Exit"); 
+		System.out.println("6) print dog ");
+		System.out.println("7) reprint this  menu ");
+		System.out.println("9) Exit");
 	}
 }
 
