@@ -1,6 +1,8 @@
 package dogkennel;
 
+import java.util.Map;
 import java.util.Scanner;
+import java.util.Set;
 
 public class UI {
 	Scanner sc = new Scanner(System.in);
@@ -25,6 +27,13 @@ public class UI {
 
 	public void printDog(Dog dog) {
 		System.out.println(dog);
+	}
+
+	public void printDogMap(Map<String, String> dogParams) {
+		Set<String> dogsKeys = dogParams.keySet();
+		for (String s : dogsKeys) {
+			System.out.println(dogParams.get(s));
+		}
 	}
 }
 	

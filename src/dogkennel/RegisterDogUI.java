@@ -6,6 +6,7 @@
 package dogkennel;
 
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  *
@@ -21,24 +22,33 @@ public class RegisterDogUI {
 		this.dog = dog;
 		
 	}
-	//public HashMap<String,String> getDogParams() {
-	public void getDogParams() {
+	public Map<String,String> getDogParams() {
+	    Map<String,String> dogParams = new HashMap<>();
 		int choice = 1;
 		printRegDogMenu();
 		while (choice != 9)  {
 			choice = ui.getInputInt("Enter choice");
 			switch(choice) {
-				case 1: dog.setDogname(ui.getInput("Name")); break;
-				case 2: dog.setBreed(ui.getInput("Breed")); break;
-				case 3: dog.setColor(ui.getInput("Color")); break;
-				case 4: dog.setAge(ui.getInputInt("Age")); break;
-				case 5: dog.setCityOrigin(ui.getInput("CityOfOrigin")); break;
-				case 6: ui.printDog(dog);
+				//case 1: dog.setDogname(ui.getInput("Name")); break;
+				case 1: dogParams.put("Name",ui.getInput("Name")); break;
+				//case 2: dog.setBreed(ui.getInput("Breed")); break;
+				case 2: dogParams.put("Breed",ui.getInput("Breed")); break;
+				//case 3: dog.setColor(ui.getInput("Color")); break;
+				case 3: dogParams.put("Color",ui.getInput("Color")); break;
+				//case 4: dog.setAge(ui.getInputInt("Age")); break;
+				case 4: dogParams.put("Age",String.valueOf(ui.getInputInt("Age"))); break;
+				//case 5: dog.setCityOrigin(ui.getInput("CityOfOrigin")); break;
+				case 5: dogParams.put("CityOfOrigin",ui.getInput("CityOfOrigin")); break;
+				//case 6: ui.printDog(dog);
+				case 6: ui.printDogMap(dogParams);
 				case 7: printRegDogMenu();break;
 				default:System.out.println("Exit");choice = 9;break;
 			}
 		}
+		System.out.println("returning dogParams");
+		return dogParams;
 	}
+
 	public void printRegDogMenu() {
 		System.out.println("Welcome to the RegisterDogMenu");
 		System.out.println("1) get Name");

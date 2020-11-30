@@ -13,7 +13,7 @@ public class Dog {
 	public Dog() {
 	}
 
-	public Dog(int id, String color, String breed, String dogname, String gender, String cityOrigin) {
+	public Dog(int id, String color, String breed, String dogname, String gender, String cityOrigin, int age) {
 		this.id = id;
 		this.dogname = dogname;
 		this.gender = gender;
@@ -67,5 +67,4 @@ public class Dog {
 		return this.dogname;
 
 	}
-	
 }
