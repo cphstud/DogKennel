@@ -35,6 +35,9 @@ public class Yard {
         return dogAdded;
     }
 
+    public Iterable<Dog> getAllDogsIter() {
+        return this.dogs;
+    }
     public List<Dog> getAllDogs() {
         return this.dogs;
     }

@@ -50,6 +50,13 @@ public class YardTest {
         System.out.println(dogx.hashCode());
         System.out.println(dogF.hashCode());
 
+        Iterable<Dog> it = new ArrayList();
+        //Iterable it = yard.getAllDogsIter();
+        it = yard.getAllDogsIter();
+        for (Dog d :it ) {
+            System.out.println("IT: " + d);
+        }
+
         List<Dog> myDogs = new ArrayList<>();
         myDogs.add(dog4);
         System.out.println(myDogs.hashCode());
