@@ -1,6 +1,6 @@
 package dogkennel;
 
-public class Dog {
+public class Dog implements Comparable<Dog>{
 //20990,Red,Dobermann,AMY,Desexed Female,WATERLOO CORNER
 	int id;
 	int age;
@@ -60,13 +60,10 @@ public class Dog {
 		return getId() == dog.getId();
 	}
 
-	/*
 	@Override
 	public int hashCode() {
 		return getId();
 	}
-
-	 */
 
 	@Override
 	public String toString() {
@@ -85,5 +82,10 @@ public class Dog {
 		return this.dogname;
 
 	}
-	
+
+
+	@Override
+	public int compareTo(Dog o) {
+	    return this.getAge()-o.getAge();
+	}
 }
