@@ -1,6 +1,6 @@
 package dogkennel;
 
-public class Dog implements Comparable<Dog>{
+public class Dog {
 //20990,Red,Dobermann,AMY,Desexed Female,WATERLOO CORNER
 	int id;
 	int age;
@@ -72,6 +72,7 @@ public class Dog implements Comparable<Dog>{
 		msg += " RACE: " + this.breed;
 		msg += " COLOR: " + this.color;
 		msg += " TOWN: " + this.cityOrigin;
+		msg += " GENDER: " + this.gender;
 		msg += " AGE: " + this.age;
 		System.out.println(msg);
 
@@ -83,9 +84,10 @@ public class Dog implements Comparable<Dog>{
 
 	}
 
-
+	/*
 	@Override
 	public int compareTo(Dog o) {
 	    return this.getAge()-o.getAge();
 	}
+	 */
 }

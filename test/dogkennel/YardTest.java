@@ -20,12 +20,17 @@ public class YardTest {
         Dog dog3 = new Dog(158701,"Grey","Siberian Husky","OAKLEY","Male","CRAIGMORE",10);
         Dog dog4 = new Dog(158705,"White","Mastiff X","SPIKE","Male","CRAIGMORE",9);
         Dog dogx = new Dog(158655,"White","Bulldog","SPOT","Male","VIRGINIA",9);
+        Dog dog5 = new Dog(158570,"White","Maltese","MADDY","Female","DAVOREN PARK",10);
+        Dog dog6 = new Dog(158571,"Tan/White","Shar Pei","DAKOTA","Male","MUNNO PARA WEST",10);
 
         Yard yard = new Yard("box1");
         yard.addDogToYard(dog);
         yard.addDogToYard(dog1);
         yard.addDogToYard(dog2);
         yard.addDogToYard(dog3);
+        yard.addDogToYard(dog4);
+        yard.addDogToYard(dog5);
+        yard.addDogToYard(dog6);
         // set
         yard.addDogToYardS(dog);
         yard.addDogToYardS(dog1);
@@ -54,8 +59,10 @@ public class YardTest {
         List<Dog> myDogsAfter = new ArrayList<>();
         myDogsAfter = yard.getAllDogs();
         System.out.println(myDogsAfter);
-        Collections.sort(myDogsAfter);
+        //Collections.sort(myDogsAfter);
+        Collections.sort(myDogsAfter,new AgeComparator());
         System.out.println(myDogsAfter);
-
+        Collections.sort(myDogsAfter,new AgeComparator().thenComparing(new GenderComparator()));
+        System.out.println(myDogsAfter);
     }
 }
