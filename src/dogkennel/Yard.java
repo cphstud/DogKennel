@@ -1,15 +1,25 @@
 package dogkennel;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Yard {
     private final List<Dog> dogs;
+    private final Set<Dog> dogsS;
     private final String yardName;
 
     public Yard(String yardName) {
         this.yardName = yardName;
         this.dogs = new ArrayList<>();
+        this.dogsS = new HashSet<>();
+    }
+
+    public boolean addDogToYardS(Dog dog) {
+        boolean retVal = false;
+        retVal= this.dogsS.add(dog);
+        return retVal;
     }
 
     public boolean addDogToYard(Dog dog) {
@@ -20,7 +30,7 @@ public class Yard {
         }
          */
         if (!dogs.contains(dog)) {
-           dogAdded=dogs.add(dog);
+            dogAdded=dogs.add(dog);
         }
         return dogAdded;
     }

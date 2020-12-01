@@ -24,6 +24,11 @@ public class YardTest {
         yard.addDogToYard(dog1);
         yard.addDogToYard(dog2);
         yard.addDogToYard(dog3);
+        // set
+        yard.addDogToYardS(dog);
+        yard.addDogToYardS(dog1);
+        yard.addDogToYardS(dog2);
+        yard.addDogToYardS(dog3);
         // get dog
         List<Dog> myDogsFound = new ArrayList<>();
         myDogsFound = yard.getDogFromYard("GIZMO");
