@@ -28,12 +28,15 @@ public class RegisterDogUI {
 		while (choice != 9)  {
 			choice = ui.getInputInt("Enter choice");
 			switch(choice) {
+				/*
 				case 1: dog.setDogname(ui.getInput("Name")); break;
 				case 2: dog.setBreed(ui.getInput("Breed")); break;
 				case 3: dog.setColor(ui.getInput("Color")); break;
 				case 4: dog.setAge(ui.getInputInt("Age")); break;
 				case 5: dog.setCityOrigin(ui.getInput("CityOfOrigin")); break;
 				case 6: ui.printDog(dog);
+
+				 */
 				case 7: printRegDogMenu();break;
 				default:System.out.println("Exit");choice = 9;break;
 			}

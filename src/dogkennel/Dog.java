@@ -23,33 +23,6 @@ public class Dog {
 		this.cityOrigin = cityOrigin;
 	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
-	public void setAge(int age) {
-		this.age = age;
-	}
-
-	public void setDogname(String dogname) {
-		this.dogname = dogname;
-	}
-
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
-
-	public void setColor(String color) {
-		this.color = color;
-	}
-
-	public void setBreed(String breed) {
-		this.breed = breed;
-	}
-
-	public void setCityOrigin(String cityOrigin) {
-		this.cityOrigin = cityOrigin;
-	}
-
 	public int getId() {
 		return id;
 	}

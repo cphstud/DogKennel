@@ -14,8 +14,13 @@ public class Yard {
 
     public boolean addDogToYard(Dog dog) {
         boolean dogAdded = false;
+        /*
         if (dogs.size() < 2) {
             dogAdded = dogs.add(dog);
+        }
+         */
+        if (!dogs.contains(dog)) {
+           dogAdded=dogs.add(dog);
         }
         return dogAdded;
     }
@@ -25,10 +30,10 @@ public class Yard {
     }
 
     public List<Dog> getDogFromYard(String searchItem) {
-        List<Dog> dogs = new ArrayList<>();
-        for (Dog d :dogs ) {
+        List<Dog> retValDogs = new ArrayList<>();
+        for (Dog d :this.dogs ) {
             if (d.getName().contains(searchItem)) {
-                dogs.add(d);
+                retValDogs.add(d);
             }
         }
         return dogs;
