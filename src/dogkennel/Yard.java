@@ -14,7 +14,9 @@ public class Yard {
 
     public boolean addDogToYard(Dog dog) {
         boolean dogAdded = false;
-        dogAdded = dogs.add(dog);
+        if (dogs.size() < 2) {
+            dogAdded = dogs.add(dog);
+        }
         return dogAdded;
     }
 
