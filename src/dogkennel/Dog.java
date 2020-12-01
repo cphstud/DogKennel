@@ -13,8 +13,9 @@ public class Dog {
 	public Dog() {
 	}
 
-	public Dog(int id, String color, String breed, String dogname, String gender, String cityOrigin) {
+	public Dog(int id, String color, String breed, String dogname, String gender, String cityOrigin, int age) {
 		this.id = id;
+		this.age = age;
 		this.dogname = dogname;
 		this.gender = gender;
 		this.color = color;
@@ -49,6 +50,33 @@ public class Dog {
 		this.cityOrigin = cityOrigin;
 	}
 
+	public int getId() {
+		return id;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public String getDogname() {
+		return dogname;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public String getColor() {
+		return color;
+	}
+
+	public String getBreed() {
+		return breed;
+	}
+
+	public String getCityOrigin() {
+		return cityOrigin;
+	}
 
 	@Override
 	public String toString() {
